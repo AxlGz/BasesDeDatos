@@ -1,0 +1,39 @@
+Diagrama: Perite planear cómo se va a constriur la base de datos.
+
+DiagramaER: se conoce como entidad relacion, porque muetra la relacion entre las diferentes entidades
+
+Diagrama Fisico: Es como el anterior, pero con mas detalles.
+    ->tipos de datos:
+        *Texto:
+            +CHAR(n): Es estricto, y se usa cuando conocemos la longitud exacta en la cadena de caracteres.
+            +VARCHAR(n):Es flexible, lo utilizamos cuando no tenemos clara la longitud de la cadena de caracteres, pero sabemos que no es mas de 255(Ese es su límite).
+            +TEXT:Permite almacenar texto de gran tamaño
+
+        *Numericos:
+            +INTEGER:Números de tipo entero.
+            +BIGINT:Números de menos de 99 caracteres.
+            +DECIMAL(n(entero.),s(decimales)):Se usa para trabajar con fracciones o con monedas.
+            +NUMERIC(n,s):Se usa para trabajar con fracciones o con monedas.
+
+        *Fecha/Hora:
+            +DATE: Sólo almacena la fecha dd/mm/aaaa
+            +TIME: Sólo almacena la hora nn:nn
+            +DATETIME: Almacena fecha y hora
+            +TIMESTAMP: Tambien almacena fecha y hora, pero de distinta forma.
+        *Lógicos:
+            +BOOLEAN: True or False.
+
+    ->Constraints(Restricciones):
+        NOTNULL: No permite campos nulos en esa columna.
+
+        UNIQUE: Se asegura que cada valor en la columna no se repita
+
+        PRIMARY KEY: Es una combinación de NOT NULL y UNIQUE
+
+        FOREING: Identifica de manera única una tupla en otra tabla
+
+        CHECK: Se asegura que el valor en la columna cumpla una condición dada
+
+        DEFAULT: Coloca un valor por defecto cuando no hay un valor especificado
+
+        INDEX:  Se crea por columna para permitir búsquedas más rápidas
